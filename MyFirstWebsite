@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Wellness Tales - Healthy Stories for Children</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .story-emoji {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .story-card h2 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.5em;
+        }
+
+        .story-card .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .story-card p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        .story-card .wellness-tip {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .story-card .wellness-tip strong {
+            color: #667eea;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            transform: scale(1.05);
+        }
+
+        .wellness-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .wellness-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+
+        .wellness-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tip-box:hover {
+            transform: scale(1.05);
+        }
+
+        .tip-box .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tip-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌈 Kids Wellness Tales</h1>
+            <p>Happy, Healthy Stories for Growing Kids</p>
+        </header>
+
+        <div class="stories-grid">
+            <!-- Story 1: Mindful Breathing -->
+            <div class="story-card">
+                <div class="story-emoji">🧘‍♀️</div>
+                <h2>Luna's Calm Breath</h2>
+                <span class="category">Mindfulness</span>
+                <p>
+                    Luna the bunny learns that when she feels anxious about starting school, 
+                    she can take deep breaths like a balloon filling with air and slowly letting 
+                    it out. This simple breathing trick helps her feel calm and ready for anything!
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> Try the 4-7-8 breathing: Breathe in for 4 counts, 
+                    hold for 7, and breathe out for 8.
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+
+            <!-- Story 2: Physical Activity -->
+            <div class="story-card">
+                <div class="story-emoji">🐢</div>
+                <h2>Terry the Turtle's Adventure</h2>
+                <span class="category">Exercise</span>
+                <p>
+                    Terry the turtle discovers that moving his body makes him feel energized and happy. 
+                    From dancing to hiking, he learns that exercise is not boring—it's an adventure! 
+                    Join him as he finds joy in staying active.
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> Try to move your body for at least 30 minutes 
+                    a day. It can be playing, dancing, or any activity you enjoy!
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+
+            <!-- Story 3: Healthy Eating -->
+            <div class="story-card">
+                <div class="story-emoji">🍎</div>
+                <h2>Oliver's Rainbow Plate</h2>
+                <span class="category">Nutrition</span>
+                <p>
+                    Oliver the owl learns that eating a variety of colorful foods gives his body 
+                    superpowers! Red tomatoes, orange carrots, yellow bananas, and more—each color 
+                    has special nutrients to keep him healthy and strong.
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> Eat the rainbow! Try to include fruits and 
+                    vegetables of different colors in each meal.
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+
+            <!-- Story 4: Sleep & Rest -->
+            <div class="story-card">
+                <div class="story-emoji">😴</div>
+                <h2>Sophie's Sleepy-Time Song</h2>
+                <span class="category">Sleep</span>
+                <p>
+                    Sophie the squirrel didn't like bedtime until she discovered her own special 
+                    routine! A warm drink, a cozy blanket, and a gentle song help her drift off 
+                    to dreamland feeling safe and rested.
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> Create a bedtime routine! Try reading, soft music, 
+                    or a warm bath before sleep.
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+
+            <!-- Story 5: Emotional Well-being -->
+            <div class="story-card">
+                <div class="story-emoji">💚</div>
+                <h2>Bella's Feelings Garden</h2>
+                <span class="category">Emotions</span>
+                <p>
+                    Bella the butterfly learns that all feelings are okay and normal—happiness, sadness, 
+                    anger, and worry. Like flowers in a garden, each emotion has its own beauty and 
+                    teaches us something important.
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> It's okay to feel different emotions. Talk to someone 
+                    you trust about how you're feeling.
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+
+            <!-- Story 6: Friendship & Kindness -->
+            <div class="story-card">
+                <div class="story-emoji">🤝</div>
+                <h2>Max's Kindness Quest</h2>
+                <span class="category">Social Wellness</span>
+                <p>
+                    Max the mouse discovers that small acts of kindness create big happiness. 
+                    Whether sharing a snack, helping a friend, or giving a hug, he learns that 
+                    being kind makes his whole community feel better.
+                </p>
+                <div class="wellness-tip">
+                    <strong>Wellness Tip:</strong> Do one small act of kindness today! It might 
+                    make someone's day better.
+                </div>
+                <a href="#" class="read-more">Read Full Story →</a>
+            </div>
+        </div>
+
+        <!-- Wellness Tips Section -->
+        <div class="wellness-section">
+            <h2>✨ Daily Wellness Reminders</h2>
+            <div class="wellness-tips">
+                <div class="tip-box">
+                    <div class="icon">💧</div>
+                    <h3>Stay Hydrated</h3>
+                    <p>Drink plenty of water throughout the day to keep your body happy!</p>
+                </div>
+                <div class="tip-box">
+                    <div class="icon">🌞</div>
+                    <h3>Get Sunshine</h3>
+                    <p>Spend time outside for Vitamin D and fresh air every day.</p>
+                </div>
+                <div class="tip-box">
+                    <div class="icon">🧠</div>
+                    <h3>Think Positive</h3>
+                    <p>Notice good things around you and practice gratitude daily.</p>
+                </div>
+                <div class="tip-box">
+                    <div class="icon">👨‍👩‍👧‍👦</div>
+                    <h3>Connect & Share</h3>
+                    <p>Spend quality time with family and friends you care about.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Kids Wellness Tales. Created with 💚 to help children grow healthy and happy.</p>
+            <p>Remember: You are amazing just the way you are!</p>
+        </footer>
+    </div>
+</body>
+</html>
